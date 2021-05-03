@@ -1,0 +1,15 @@
+server:
+  port: 8083
+  tomcat:
+    connection-timeout: 18000000
+  servlet:
+    session:
+      timeout: 30
+
+spring:
+  application:
+    name: aitestname
+
+zidingyi:
+  key1: value1
+  key2: value2
