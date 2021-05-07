@@ -4,6 +4,9 @@ import com.example.hogwartsmini.dto.UserDto;
 import com.example.hogwartsmini.service.UserService;
 import org.springframework.stereotype.Service;
 
+/**
+ * service 层接口的实现类
+ */
 @Service
 public class UserServiceImpl implements UserService {
 

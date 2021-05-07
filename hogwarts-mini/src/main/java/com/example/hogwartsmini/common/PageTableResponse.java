@@ -5,6 +5,10 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * 分页响应对象
+ * @param <T>
+ */
 @Data
 public class PageTableResponse<T> implements Serializable {
 

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TestTool.iml" filepath="$PROJECT_DIR$/.idea/TestTool.iml" />
       <module fileurl="file://$PROJECT_DIR$/hogwarts-mini/hogwarts-mini.iml" filepath="$PROJECT_DIR$/hogwarts-mini/hogwarts-mini.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hogwarts-mybatis/hogwarts-mybatis.iml" filepath="$PROJECT_DIR$/hogwarts-mybatis/hogwarts-mybatis.iml" />
     </modules>
   </component>
 </project>

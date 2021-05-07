@@ -1,7 +1,7 @@
 package com.example.hogwartsmini.common;
 
 /**
- * 业务异常类
+ * 业务异常处理类
  */
 public class ServiceException extends RuntimeException{
 

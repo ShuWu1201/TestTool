@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/hogwarts-mini/pom.xml" />
+        <option value="$PROJECT_DIR$/hogwarts-mybatis/pom.xml" />
       </list>
     </option>
   </component>

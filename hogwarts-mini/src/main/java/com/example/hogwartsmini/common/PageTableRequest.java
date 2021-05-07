@@ -8,6 +8,10 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 分页请求对象
+ * @param <Dto>
+ */
 @ApiModel(value = "列表查询的分页参数", description = "请求参数类")
 @Data
 public class PageTableRequest<Dto extends BaseDto> implements Serializable {
