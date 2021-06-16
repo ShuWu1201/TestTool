@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="灵活配置测试脚本-参数化测试">
+
+    <test verbose="2" name="TestParameters">
+        <parameter name="x" value="4"></parameter>
+        <parameter name="y" value="2"></parameter>
+        <parameter name="expectedResult" value="6"></parameter>
+        <classes>
+            <!-- 指定测试的类 -->
+            <class name="com.testngdemo.TestNGDemo_5_1_Parameters">
+                <methods>
+                    <!-- 指定测试的方法，不指定时将执行测试类中全部的方法 -->
+                    <include name="addTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

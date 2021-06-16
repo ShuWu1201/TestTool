@@ -7,7 +7,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @SpringBootApplication
-@MapperScan(basePackages = "generator/mapper")
+//@MapperScan(basePackages = "generator/mapper")
 public class HogwartsMybatisApplication {
     public static void main(String[] args) {
         SpringApplication.run(HogwartsMybatisApplication.class, args);

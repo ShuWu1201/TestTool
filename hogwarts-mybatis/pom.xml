@@ -172,6 +172,32 @@
                 </includes>
             </resource>
 
+            <resource>
+                <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.yml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                <filtering>true</filtering>
+            </resource>
+
+            <resource>
+                <!--控制资源目录下要打包进去的文件，这里为全部打包-->
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                    <include>**/*.yml</include>-->
+<!--                    <include>**/*.properties</include>-->
+<!--                </includes>-->
+<!--                <filtering>true</filtering>-->
+<!--            </resource>-->
+
         </resources>
 
     </build>

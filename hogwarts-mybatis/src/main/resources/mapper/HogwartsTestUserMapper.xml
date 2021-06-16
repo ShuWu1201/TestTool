@@ -20,4 +20,12 @@
 <!--    SELECT * FROM hogwarts_test_user WHERE id = #{id}-->
 <!--  </select>-->
 
+  <update id="updateUserDemo">
+    update hogwarts_test_user set
+        user_name = #{username},
+        password = #{password},
+        email = #{email}
+    where id = #{id}
+  </update>
+
 </mapper>

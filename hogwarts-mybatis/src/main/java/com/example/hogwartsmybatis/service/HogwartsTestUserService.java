@@ -16,4 +16,11 @@ public interface HogwartsTestUserService {
      * @return
      */
     public ResultDto<HogwartsTestUser> save(HogwartsTestUser hogwartsTestUser);
+
+    /**
+     * 更新
+     * @param hogwartsTestUser
+     * @return
+     */
+    public ResultDto<HogwartsTestUser> update(HogwartsTestUser hogwartsTestUser);
 }

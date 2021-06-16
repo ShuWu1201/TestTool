@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="灵活配置测试脚本-class">
+
+    <test verbose="2" name="TestClass">
+        <classes>
+            <class name="com.testngdemo.examples.packageA.ClassATest">
+                <methods>
+<!--                    <include name="testCaseA01"></include>-->
+<!--                    <exclude name="testCaseA02"></exclude>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/hogwarts-mini/pom.xml" />
         <option value="$PROJECT_DIR$/hogwarts-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Junit5Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/TestNGDemo/pom.xml" />
       </list>
     </option>
   </component>

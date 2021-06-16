@@ -5,17 +5,17 @@ import com.example.hogwartsmybatis.dao.HogwartsTestUserMapper;
 import com.example.hogwartsmybatis.entity.HogwartsTestUser;
 import com.example.hogwartsmybatis.service.HogwartsTestUserService;
 import lombok.Data;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Service
 @Data
-public class HogwartsTestUserServiceImpl implements HogwartsTestUserService {
+public class HogwartsTestUserServiceImpl implements HogwartsTestUserService, InitializingBean {
 
-    @Qualifier
+    @Autowired
     private HogwartsTestUserMapper hogwartsTestUserMapper;
 
 
@@ -32,5 +32,16 @@ public class HogwartsTestUserServiceImpl implements HogwartsTestUserService {
         hogwartsTestUserMapper.insertUseGeneratedKeys(hogwartsTestUser);
 
         return ResultDto.success("插入成功！", hogwartsTestUser);
+    }
+
+    @Override
+    public ResultDto<HogwartsTestUser> update(HogwartsTestUser hogwartsTestUser) {
+        hogwartsTestUserMapper.updateUserDemo(hogwartsTestUser.getUserName(), hogwartsTestUser.getPassword(), hogwartsTestUser.getEmail(), hogwartsTestUser.getId());
+        return ResultDto.success("成功", hogwartsTestUser);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("afterPropertiesSet");
     }
 }

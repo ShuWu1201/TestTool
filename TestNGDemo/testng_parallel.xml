@@ -1,0 +1,10 @@
+<!-- 混合多线程xml配置 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="混合多线程-测试脚本" parallel="methods" thread-count="2" time-out="8000">
+
+    <test name="TableLockTest">
+        <classes>
+            <class name="com.testngdemo.TestNGDemo_4_2_MixParallel"></class>
+        </classes>
+    </test>
+</suite>

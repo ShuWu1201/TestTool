@@ -23,7 +23,8 @@ public class HogwartsTestUser extends BaseEntityNew {
     private String userName;
 
     /**
-     * 密码
+     * 密码，
+     * 当属性名和数据库字段名一致时，可以不用@Column注解标注
      */
     private String password;
 
@@ -61,5 +62,11 @@ public class HogwartsTestUser extends BaseEntityNew {
      */
     @Column(name = "update_time")
     private Date updateTime;
+
+    /**
+     * 标识此字段不进行持久化
+     */
+    @Transient
+    private String projectName;
 
 }

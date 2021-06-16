@@ -3,6 +3,7 @@ server:
   servlet:
     session:
       timeout: 30m
+  #address: 192.168.0.150
 spring:
   application:
     name: hgwartsmini

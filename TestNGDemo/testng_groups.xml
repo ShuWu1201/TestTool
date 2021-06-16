@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="灵活配置测试脚本-groups">
+
+    <test verbose="2" name="TestGroups">
+        <groups>
+            <!-- 自定义一个name为all的groups，其中包含group01、group02 -->
+            <define name="all">
+                <include name="group01"></include>
+                <include name="group02"></include>
+            </define>
+
+            <!-- run name为all的groups但是除去group02 -->
+            <run>
+                <include name="all"></include>
+                <exclude name="group02"></exclude>
+            </run>
+        </groups>
+        <!-- 配置需要执行的类 -->
+        <classes>
+            <class name="com.testngdemo.examples.packageA.ClassATest"></class>
+            <class name="com.testngdemo.examples.packageB.ClassBTest"></class>
+        </classes>
+    </test>
+</suite>

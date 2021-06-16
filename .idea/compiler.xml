@@ -8,12 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hogwarts-mybatis" />
+        <module name="TestNGDemo" />
+        <module name="Junit5Demo" />
         <module name="hogwarts-mini" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hogwarts-mini" target="1.8" />
       <module name="hogwarts-mybatis" target="1.8" />
+      <module name="Junit5Demo" target="1.8" />
+      <module name="TestNGDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

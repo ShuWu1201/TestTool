@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="灵活配置测试脚本-package">
+
+    <test verbose="2" name="TestPackage">
+        <packages>
+            <package name="com.testngdemo.examples.packageA"></package>
+            <package name="com.testngdemo.examples.packageB"></package>
+        </packages>
+    </test>
+</suite>
