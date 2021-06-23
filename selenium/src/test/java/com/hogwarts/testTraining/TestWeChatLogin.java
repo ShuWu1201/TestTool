@@ -19,8 +19,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @ClassName TestDebug
- * @Description 编写脚本过程中的测试类
+ * @ClassName TestWeChatLogin
+ * @Description 自动化测试企业微信扫码登录；先手动扫码将cookie保存下来后登录的时候直接addCookie的方式注入
  * @Author sfmewl
  * @Date 2021/6/20 22:52
  **/
