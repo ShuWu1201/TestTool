@@ -40,8 +40,11 @@ public class ParamsTest {
     }
 
 
-    @Test
-    void search() throws InterruptedException {
+    @ParameterizedTest
+    //@ValueSource(strings = {"百度搜索关键字1", "百度搜索关键字2"})
+    // @MethodSource注解中如果不加参数会默认从同名的静态方法中获取参数
+    @MethodSource
+    void search(String keyWord) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "/Users/sfmewl/Documents/process/selenium/chromedriver");
         WebDriver webDriver = new ChromeDriver();
@@ -49,13 +52,17 @@ public class ParamsTest {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webDriver.get("https://www.baidu.com/");
 
-        webDriver.findElement(By.id("kw")).sendKeys("自动化测试框架");
+        webDriver.findElement(By.id("kw")).sendKeys(keyWord);
         webDriver.findElement(By.id("su")).click();
 
         Thread.sleep(5000);
 
         webDriver.quit();
 
+    }
+
+    static Stream<String> search(){
+        return Stream.of("apple", "banana");
     }
 
 
