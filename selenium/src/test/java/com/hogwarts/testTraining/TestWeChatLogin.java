@@ -39,7 +39,7 @@ public class TestWeChatLogin {
      * @throws InterruptedException
      * @throws IOException
      */
-    @Ignore
+    @Test
     public void testLogin() throws InterruptedException, IOException {
         webDriver.get("https://work.weixin.qq.com/wework_admin/frame");
 
@@ -68,6 +68,7 @@ public class TestWeChatLogin {
      * @throws InterruptedException
      * @throws IOException
      */
+    @Ignore
     @Test
     public void testLogined() throws IOException, InterruptedException {
         webDriver.get("https://work.weixin.qq.com/wework_admin/frame");
