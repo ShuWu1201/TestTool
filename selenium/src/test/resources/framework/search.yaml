@@ -1,4 +1,15 @@
-# 数据驱动：以测试数据来驱动测试
-- apple
-- banana
-- couple
+# 数据驱动：以测试数据来驱动测试。data通过list表示，steps 用map表示
+data:
+  - apple
+  - banana
+  - couple
+
+steps:
+  - chrome: {}
+  - implicitly_wait: 5
+  - get: https://baidu.com
+  - find: { id: kw }
+#  - click: {}
+#  - find: { id: su }
+  - send_keys: {data: MMP}
+  - click: {}

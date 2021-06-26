@@ -45,7 +45,7 @@ public class ParamsTest {
         return Stream.of("apple", "banana");
     }
 
-
+    /**
     @ParameterizedTest
     //@ValueSource(strings = {"百度搜索关键字1", "百度搜索关键字2"})
     // @MethodSource注解中如果不加参数会默认从同名的静态方法中获取参数
@@ -67,6 +67,7 @@ public class ParamsTest {
 
     }
 
+
     static List<String> search() throws IOException {
         //return Stream.of("apple", "banana");
 
@@ -81,6 +82,51 @@ public class ParamsTest {
         );
         System.out.println(keyword);
         return keyword;
+    }
+     */
+
+
+    /**
+     * 将上述测试流程进行数据驱动
+     * @param testCase
+     */
+    @ParameterizedTest
+    @MethodSource
+    void search(TestCase testCase) {
+
+        System.setProperty("webdriver.chrome.driver", "/Users/sfmewl/Documents/process/selenium/chromedriver");
+        //WebDriver webDriver = new ChromeDriver();
+
+//        webDriver.manage().timeouts().implicitlyWait(testCase.steps.)
+
+        System.out.println(testCase);
+        try {
+            // runner 引擎
+            testCase.run();
+        } finally {
+            testCase.getWebDriver().quit();
+        }
+
+
+        testCase.getWebDriver().quit();
+
+    }
+
+
+    static Stream<TestCase> search() throws IOException {
+        //return Stream.of("apple", "banana");
+
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        //TypeReference typeReference = new TypeReference<List<String>>(){};
+
+
+        TestCase testCase = mapper.readValue(
+                //Thread.currentThread().getContextClassLoader().getClass().getResourceAsStream("/framework/search.yaml"),
+                ParamsTest.class.getResourceAsStream("/framework/search.yaml"),
+                TestCase.class
+        );
+        System.out.println(testCase);
+        return Stream.of(testCase);
     }
 
 
