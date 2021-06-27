@@ -4,6 +4,8 @@ data:
   - banana
   - couple
 
+
+# 支持 PO 模式
 steps:
   - chrome: {}
   - implicitly_wait: 5
@@ -11,5 +13,6 @@ steps:
   - find: { id: kw }
 #  - click: {}
 #  - find: { id: su }
-  - send_keys: {data: MMP}
-  - click: {}
+  - send_keys: ${data}
+  - click: { id: su}
+  - sleep: 3

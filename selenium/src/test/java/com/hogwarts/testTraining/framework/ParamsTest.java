@@ -1,23 +1,16 @@
 package com.hogwarts.testTraining.framework;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import org.apache.tools.ant.util.FileUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.File;
 import java.io.IOException;
 import java.time.temporal.ChronoUnit;
 import java.util.EnumSet;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -113,7 +106,7 @@ public class ParamsTest {
     }
 
 
-    static Stream<TestCase> search() throws IOException {
+    static List<TestCase> search() throws IOException {
         //return Stream.of("apple", "banana");
 
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
@@ -125,8 +118,11 @@ public class ParamsTest {
                 ParamsTest.class.getResourceAsStream("/framework/search.yaml"),
                 TestCase.class
         );
-        System.out.println(testCase);
-        return Stream.of(testCase);
+
+        return testCase.testcaseGenerate();
+
+//        System.out.println(testCase);
+//        return Stream.of(testCase);
     }
 
 

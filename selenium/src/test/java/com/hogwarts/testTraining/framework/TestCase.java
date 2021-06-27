@@ -8,8 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @ClassName TestCase
@@ -19,30 +19,47 @@ import java.util.concurrent.atomic.AtomicReference;
  **/
 public class TestCase {
 
-    public WebDriver getWebDriver() {
-        return webDriver;
-    }
-
-    public void setWebDriver(WebDriver webDriver) {
-        this.webDriver = webDriver;
-    }
-
-    public WebElement getCurrentElement() {
-        return currentElement;
-    }
-
-    public void setCurrentElement(WebElement currentElement) {
-        this.currentElement = currentElement;
-    }
-
-    private WebDriver webDriver;
-
     public List<String> data;
-
     // search.yaml 文件中，HashMap的Value具体类型不确定，使用Object
     public List<HashMap<String, Object>> steps;
-
+    private WebDriver webDriver;
     private WebElement currentElement;
+    public int index = 0;
+
+
+    /**
+     * 基于外部文件的测试数据生成多个测试用例
+     * @return
+     */
+    public List<TestCase> testcaseGenerate(){
+        List<TestCase> testCaseList = new ArrayList<>();
+        for (int i = 0; i < data.size(); i++) {
+            TestCase testCaseNew = new TestCase();
+            testCaseNew.index = i;
+            testCaseNew.steps = steps;
+            testCaseNew.data = data;
+            testCaseList.add(testCaseNew);
+        }
+        return testCaseList;
+    }
+
+    /**
+     * getValue()方法替换 yaml 文件中的变量
+     * 数据为复杂数据结构时需要使用递归
+     */
+    private Object getValue(Map<String, Object> step, String key){
+        Object value = step.get(key);
+        if (value instanceof String){
+            // 对获取到的值进行替换 TODO：支持复杂类型，复杂类型一般使用递归
+            return ((String)value).replace("${data}", data.get(index));
+        }else {
+            return value;
+        }
+    }
+    private Object getValue(Map<String, Object> step, String key, Object defaultValue){
+        return step.getOrDefault(key, defaultValue);
+    }
+
 
     public void run(){
         try {
@@ -57,14 +74,17 @@ public class TestCase {
                 if (step.keySet().contains("implicitly_wait")){
                     System.out.println(step);
 
-                    webDriver.manage().timeouts().implicitlyWait(
-                            (Integer) step.get("implicitly_wait"), TimeUnit.SECONDS);
+//                    webDriver.manage().timeouts().implicitlyWait(
+//                            (Integer) step.get("implicitly_wait"), TimeUnit.SECONDS);
                             //(Long)step.getOrDefault("implicitly_wait", 5), TimeUnit.SECONDS);
+                    webDriver.manage().timeouts().implicitlyWait(
+                            (Integer) getValue(step, "implicitly_wait", 5), TimeUnit.SECONDS);
                 }
                 if (step.keySet().contains("get")){
                     System.out.println(step);
 
                     webDriver.get((String) step.get("get"));
+                    //webDriver.get(getValue(step, "get").toString());
                 }
                 if (step.keySet().contains("find")){
                     System.out.println(step);
@@ -74,6 +94,7 @@ public class TestCase {
                     ArrayList<By> bys = new ArrayList<>();
 
                     // entrySet 是设置类型为Map的变量
+                    //((HashMap)getValue(step, "find")).entrySet().forEach(stringEntry -> {...});
                     ((HashMap<String, String>)step.get("find")).entrySet().forEach(stringEntry -> {
                         if (stringEntry.getKey().contains("id")){
                             bys.add(By.id(stringEntry.getValue()));
@@ -91,28 +112,62 @@ public class TestCase {
 
                 if (step.keySet().contains("send_keys")){
 
+                    // HaspMap 中 remove 可以将删除的数据返回
+                    //System.out.println(((HashMap<String, String>)step.get("send_keys")).remove("data"));
+
+                    // currentElement.sendKeys(((HashMap<String, String>)step.get("send_keys")).get("data"));
+                    // 封装getValue后的写法，从step中的map中取值
+                    currentElement.sendKeys(getValue(step, "send_keys").toString());
+
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+                if (step.entrySet().contains("click")){
                     System.out.println(step);
+                    webDriver.findElement(By.id((String) getValue((HashMap)step.get("click"), "id"))).click();
 
-                    // (String)step.get("send_keys")
-                    currentElement.sendKeys("MMP");
-
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
 
-                if (step.keySet().contains("click")){
-                    System.out.println(step);
-                    currentElement.click();
+                if (step.keySet().contains("sleep")){
+                    try {
+                        Thread.sleep(((Long.valueOf((Integer)getValue(step, "sleep"))) * 1000));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
 
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
 
             });
         } finally {
             webDriver.quit();
         }
     }
+
+    public WebDriver getWebDriver() {
+        return webDriver;
+    }
+
+    public void setWebDriver(WebDriver webDriver) {
+        this.webDriver = webDriver;
+    }
+
+    public WebElement getCurrentElement() {
+        return currentElement;
+    }
+
+    public void setCurrentElement(WebElement currentElement) {
+        this.currentElement = currentElement;
+    }
+
 
 }
