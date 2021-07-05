@@ -1,0 +1,5 @@
+# 搜索页操作的过程
+search:
+  - send_keys: ${data}
+  - click: { id: su}
+  - sleep: 3
