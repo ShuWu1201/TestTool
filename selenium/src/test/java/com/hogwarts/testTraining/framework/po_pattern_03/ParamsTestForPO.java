@@ -48,7 +48,7 @@ public class ParamsTestForPO {
         //TypeReference typeReference = new TypeReference<List<String>>(){};
 
 
-        POTestCase testCase = mapper.readValue(
+        TestCase testCase = mapper.readValue(
                 //Thread.currentThread().getContextClassLoader().getClass().getResourceAsStream("/framework/search.yaml"),
                 ParamsTest.class.getResourceAsStream("/framework/framework_search_po_test.yaml"),
                 POTestCase.class

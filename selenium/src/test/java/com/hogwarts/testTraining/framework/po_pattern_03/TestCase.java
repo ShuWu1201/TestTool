@@ -59,4 +59,5 @@ public class TestCase {
 
     }
 
+    public void run01(){}
 }

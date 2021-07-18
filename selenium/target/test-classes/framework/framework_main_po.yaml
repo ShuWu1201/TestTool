@@ -1,8 +1,14 @@
-# 每一个yaml文件代表一个PO类，其中search代表PO类里面的方法，再往下就是PO里的一个一个步骤
+# 每一个yaml文件代表一个PO类，其中search代表PO类里面的方法，再往下就是PO里的一个一个步骤，将一个页面进行数据驱动
 
-# 主页初始化driver及search的过程
-search:
-  - chrome: {}
+
+# 主页、driver初始化的过程
+init:
+  - chrome: { }
   - implicitly_wait: 5
   - get: https://baidu.com
+# search的过程
+search:
   - find: { id: kw }
+  - sendkeys: {$data}
+
+# 将yaml文件和面向PO的设计结合起来，使用basePage来创建一个PO对象，并将执行步骤加载执行。即脱离类来执行

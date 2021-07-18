@@ -9,9 +9,10 @@ data:
 # 支持 PO 模式，按业务流来进行数据驱动
 steps:
 # 根据类名反射时，需要把copy的.java去掉，不能包含文件类型，否则会导致类无法找到
-  - init: [ mainPage, com.hogwarts.testTraining.framework.po_pattern_02.MainPage ]
+#  - init: [ mainPage, com.hogwarts.testTraining.framework.po_pattern_02.MainPage ]
+  - init: [ mainPage, framework_main_po.yaml ]
   - implicitly_wait: 5
 #  - get: https://baidu.com
   - mainPage.search: {}
 #  - searchPage: {}
-  - searchPage.search: ${data}
+#  - searchPage.search: ${data}

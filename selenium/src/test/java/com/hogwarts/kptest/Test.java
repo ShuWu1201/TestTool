@@ -47,6 +47,17 @@ public class Test {
         for (String s: strings) {
             System.out.println(s);
         }
+
+    }
+
+    /**
+     * 父类无法强制转换成子类
+     */
+    @org.junit.jupiter.api.Test
+    public void testFatherCastChild(){
+//        People people = new People();
+//        Student student = (Student) people;
+//        System.out.println(student);
     }
 
 }

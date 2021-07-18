@@ -48,5 +48,8 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.ant:ant:1.10.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.ant:ant-launcher:1.10.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-beans:5.3.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-core:5.3.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-jcl:5.3.6" level="project" />
   </component>
 </module>

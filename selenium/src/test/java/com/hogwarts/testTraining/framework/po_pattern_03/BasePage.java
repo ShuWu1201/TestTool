@@ -3,12 +3,10 @@ package com.hogwarts.testTraining.framework.po_pattern_03;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.hogwarts.testTraining.framework.po_pattern_01.ParamsTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +24,7 @@ public class BasePage {
     HashMap<String, BasePage> pages = new HashMap<>();
 
     // 保存 framework_main_po.yaml 文件
-    HashMap<String, List<HashMap<String, Object>>> pageYamlSource = new HashMap<>();
+    HashMap<String, List<HashMap<String, Object>>> yamlSource = new HashMap<>();
 
     // 获取到一个单例的方法，这个单例用于存储所有的po
     public static BasePage getInstance() {
@@ -72,16 +70,27 @@ public class BasePage {
      * @throws IllegalAccessException
      */
     void stepRun(String method){
-        //getMethods只能找到public修饰的方法；getDeclaredMethods可以找到类中声明的所有方法
-        Method methodInvoke = Arrays.stream(this.getClass().getMethods()).filter(method1 ->
-            method1.getName().equals(method)).findFirst().get();
-        try {
-            methodInvoke.invoke(this);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }
+        /**
+         * 通过反射查找并执行方法
+         */
+//        // getMethods只能找到public修饰的方法；getDeclaredMethods可以找到类中声明的所有方法
+//        Method methodInvoke = Arrays.stream(this.getClass().getMethods()).filter(method1 ->
+//            method1.getName().equals(method)).findFirst().get();
+//        try {
+//            methodInvoke.invoke(this);
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        } catch (InvocationTargetException e) {
+//            e.printStackTrace();
+//        }
+
+        System.out.println(method);
+
+        List<HashMap<String, Object>> steps = yamlSource.get(method);
+        TestCase testCase = new POTestCase();
+        testCase.steps = steps;
+        testCase.data = Arrays.asList("");
+        testCase.run01();
     }
 
     BasePage poInit(String name, String className){
@@ -101,7 +110,7 @@ public class BasePage {
             TypeReference<HashMap<String, List<HashMap<String, Object>>>> typeReference =
                     new TypeReference<HashMap<String, List<HashMap<String, Object>>>>(){};
             // 读取 yaml 文件并存入 pageYamlSource 中
-            pageClass.pageYamlSource = mapper.readValue(
+            pageClass.yamlSource = mapper.readValue(
                     // String.format("/framework/%s", className) 是使用 className 替代 %s
                     BasePage.class.getResourceAsStream(String.format("/framework/%s", className)),
                     typeReference);
