@@ -42,9 +42,19 @@ public class StartSelenium {
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         /**
-         * 根据xpath路径找到元素并click一下
+         * 根据xpath路径找到【百度学术】元素并click一下
          */
         webDriver.findElement(By.xpath("//*[@id=\"s-top-left\"]/a[7]")).click();
+
+        /**
+         * 打开【百度学术】后线程sleep 5s 观察效果
+         */
+        Thread.sleep(5000);
+
+        /**
+         * 退出浏览器资源
+         */
+        webDriver.quit();
     }
 
 }

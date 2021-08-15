@@ -27,13 +27,19 @@ public class SeleniumDemo_1_TestBaidu {
      */
     @BeforeAll
     public static void inintData(){
+        /**
+         * 设置浏览器资源为 chrome.driver
+         */
 //        System.setProperty("webdriver.chrome.driver", "/Users/sfmewl/Documents/process/selenium/chromedriver");
 //        webDriver = new ChromeDriver();
 
+        /**
+         * 设置浏览器资源为 gecko.driver
+         */
         System.setProperty("webdriver.gecko.driver", "/Users/sfmewl/Documents/process/selenium/geckodriver");
         webDriver = new FirefoxDriver();
 
-        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
     }
 
@@ -45,7 +51,7 @@ public class SeleniumDemo_1_TestBaidu {
     public void testBaidu() throws InterruptedException {
         // 打开百度首页
         webDriver.get("https://www.baidu.com/");
-        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         // 输入框输入selenium
         webDriver.findElement(By.xpath("//*[@id=\"kw\"]")).sendKeys("selenium");

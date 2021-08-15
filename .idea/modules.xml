@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/hogwarts-mini/hogwarts-mini.iml" filepath="$PROJECT_DIR$/hogwarts-mini/hogwarts-mini.iml" />
       <module fileurl="file://$PROJECT_DIR$/hogwarts-mybatis/hogwarts-mybatis.iml" filepath="$PROJECT_DIR$/hogwarts-mybatis/hogwarts-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/selenium/selenium.iml" filepath="$PROJECT_DIR$/selenium/selenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-test-debug/zz-test-debug.iml" filepath="$PROJECT_DIR$/zz-test-debug/zz-test-debug.iml" />
     </modules>
   </component>
 </project>
