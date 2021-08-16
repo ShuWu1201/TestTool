@@ -74,6 +74,26 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- mock.wiremock -->
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock-jre8</artifactId>
+            <version>2.30.1</version>
+        </dependency>
 
+        <!-- browsermob-proxy -->
+        <dependency>
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>2.1.5</version>
+<!--            <scope>test</scope>-->
+        </dependency>
+
+        <!-- sparkjava -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.9.3</version>
+        </dependency>
     </dependencies>
 </project>
