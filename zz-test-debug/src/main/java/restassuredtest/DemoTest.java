@@ -1,4 +1,4 @@
-package demotest;
+package restassuredtest;
 
 import org.junit.jupiter.api.Test;
 

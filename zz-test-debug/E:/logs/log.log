@@ -1,0 +1,194 @@
+2021-08-17 15:00:56  [ main:0 ] - [ DEBUG ]  Get connection for route {s}->https://qyapi.weixin.qq.com:443
+2021-08-17 15:00:56  [ main:48 ] - [ DEBUG ]  Connecting to qyapi.weixin.qq.com:443
+2021-08-17 15:00:56  [ main:544 ] - [ DEBUG ]  CookieSpec selected: ignoreCookies
+2021-08-17 15:00:56  [ main:546 ] - [ DEBUG ]  Auth cache not set in the context
+2021-08-17 15:00:56  [ main:546 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2021-08-17 15:00:56  [ main:547 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2021-08-17 15:00:56  [ main:547 ] - [ DEBUG ]  Attempt 1 to execute request
+2021-08-17 15:00:56  [ main:548 ] - [ DEBUG ]  Sending request: GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1
+2021-08-17 15:00:56  [ main:549 ] - [ DEBUG ]   >> "GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1[\r][\n]"
+2021-08-17 15:00:56  [ main:552 ] - [ DEBUG ]   >> "Accept: */*[\r][\n]"
+2021-08-17 15:00:56  [ main:552 ] - [ DEBUG ]   >> "Host: qyapi.weixin.qq.com[\r][\n]"
+2021-08-17 15:00:56  [ main:552 ] - [ DEBUG ]   >> "Connection: Keep-Alive[\r][\n]"
+2021-08-17 15:00:56  [ main:553 ] - [ DEBUG ]   >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)[\r][\n]"
+2021-08-17 15:00:56  [ main:554 ] - [ DEBUG ]   >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-08-17 15:00:56  [ main:555 ] - [ DEBUG ]   >> "[\r][\n]"
+2021-08-17 15:00:56  [ main:555 ] - [ DEBUG ]  >> GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1
+2021-08-17 15:00:56  [ main:556 ] - [ DEBUG ]  >> Accept: */*
+2021-08-17 15:00:56  [ main:556 ] - [ DEBUG ]  >> Host: qyapi.weixin.qq.com
+2021-08-17 15:00:56  [ main:557 ] - [ DEBUG ]  >> Connection: Keep-Alive
+2021-08-17 15:00:56  [ main:557 ] - [ DEBUG ]  >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)
+2021-08-17 15:00:56  [ main:557 ] - [ DEBUG ]  >> Accept-Encoding: gzip,deflate
+2021-08-17 15:00:56  [ main:681 ] - [ DEBUG ]   << "HTTP/1.1 200 OK[\r][\n]"
+2021-08-17 15:00:56  [ main:688 ] - [ DEBUG ]   << "Server: nginx[\r][\n]"
+2021-08-17 15:00:56  [ main:689 ] - [ DEBUG ]   << "Date: Tue, 17 Aug 2021 07:00:58 GMT[\r][\n]"
+2021-08-17 15:00:56  [ main:689 ] - [ DEBUG ]   << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-08-17 15:00:56  [ main:689 ] - [ DEBUG ]   << "Content-Length: 277[\r][\n]"
+2021-08-17 15:00:56  [ main:690 ] - [ DEBUG ]   << "Connection: keep-alive[\r][\n]"
+2021-08-17 15:00:56  [ main:690 ] - [ DEBUG ]   << "Error-Code: 0[\r][\n]"
+2021-08-17 15:00:56  [ main:690 ] - [ DEBUG ]   << "Error-Msg: ok[\r][\n]"
+2021-08-17 15:00:56  [ main:691 ] - [ DEBUG ]   << "[\r][\n]"
+2021-08-17 15:00:56  [ main:692 ] - [ DEBUG ]  Receiving response: HTTP/1.1 200 OK
+2021-08-17 15:00:56  [ main:693 ] - [ DEBUG ]  << HTTP/1.1 200 OK
+2021-08-17 15:00:56  [ main:696 ] - [ DEBUG ]  << Server: nginx
+2021-08-17 15:00:56  [ main:698 ] - [ DEBUG ]  << Date: Tue, 17 Aug 2021 07:00:58 GMT
+2021-08-17 15:00:56  [ main:698 ] - [ DEBUG ]  << Content-Type: application/json; charset=UTF-8
+2021-08-17 15:00:56  [ main:699 ] - [ DEBUG ]  << Content-Length: 277
+2021-08-17 15:00:56  [ main:700 ] - [ DEBUG ]  << Connection: keep-alive
+2021-08-17 15:00:56  [ main:700 ] - [ DEBUG ]  << Error-Code: 0
+2021-08-17 15:00:56  [ main:700 ] - [ DEBUG ]  << Error-Msg: ok
+2021-08-17 15:00:56  [ main:706 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:00:56  [ main:778 ] - [ DEBUG ]  Parsing response as: application/json; charset=UTF-8
+2021-08-17 15:00:56  [ main:779 ] - [ DEBUG ]  Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-08-17 15:00:56  [ main:877 ] - [ DEBUG ]   << "{"errcode":0,"errmsg":"ok","access_token":"CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw","expires_in":7200}"
+2021-08-17 15:00:56  [ main:879 ] - [ DEBUG ]  Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@741b3bc3
+2021-08-17 15:00:56  [ main:880 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:00:57  [ main:1379 ] - [ INFO ]  CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw
+2021-08-17 15:01:19  [ main:0 ] - [ DEBUG ]  Get connection for route {s}->https://qyapi.weixin.qq.com:443
+2021-08-17 15:01:19  [ main:13 ] - [ DEBUG ]  Connecting to qyapi.weixin.qq.com:443
+2021-08-17 15:01:19  [ main:565 ] - [ DEBUG ]  CookieSpec selected: ignoreCookies
+2021-08-17 15:01:19  [ main:567 ] - [ DEBUG ]  Auth cache not set in the context
+2021-08-17 15:01:19  [ main:567 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2021-08-17 15:01:19  [ main:568 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2021-08-17 15:01:19  [ main:568 ] - [ DEBUG ]  Attempt 1 to execute request
+2021-08-17 15:01:19  [ main:569 ] - [ DEBUG ]  Sending request: GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1
+2021-08-17 15:01:19  [ main:570 ] - [ DEBUG ]   >> "GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1[\r][\n]"
+2021-08-17 15:01:19  [ main:572 ] - [ DEBUG ]   >> "Accept: */*[\r][\n]"
+2021-08-17 15:01:19  [ main:572 ] - [ DEBUG ]   >> "Host: qyapi.weixin.qq.com[\r][\n]"
+2021-08-17 15:01:19  [ main:573 ] - [ DEBUG ]   >> "Connection: Keep-Alive[\r][\n]"
+2021-08-17 15:01:19  [ main:573 ] - [ DEBUG ]   >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)[\r][\n]"
+2021-08-17 15:01:19  [ main:573 ] - [ DEBUG ]   >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-08-17 15:01:19  [ main:574 ] - [ DEBUG ]   >> "[\r][\n]"
+2021-08-17 15:01:19  [ main:574 ] - [ DEBUG ]  >> GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1
+2021-08-17 15:01:19  [ main:576 ] - [ DEBUG ]  >> Accept: */*
+2021-08-17 15:01:19  [ main:576 ] - [ DEBUG ]  >> Host: qyapi.weixin.qq.com
+2021-08-17 15:01:19  [ main:576 ] - [ DEBUG ]  >> Connection: Keep-Alive
+2021-08-17 15:01:19  [ main:576 ] - [ DEBUG ]  >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)
+2021-08-17 15:01:19  [ main:577 ] - [ DEBUG ]  >> Accept-Encoding: gzip,deflate
+2021-08-17 15:01:19  [ main:695 ] - [ DEBUG ]   << "HTTP/1.1 200 OK[\r][\n]"
+2021-08-17 15:01:19  [ main:701 ] - [ DEBUG ]   << "Server: nginx[\r][\n]"
+2021-08-17 15:01:19  [ main:702 ] - [ DEBUG ]   << "Date: Tue, 17 Aug 2021 07:01:21 GMT[\r][\n]"
+2021-08-17 15:01:19  [ main:702 ] - [ DEBUG ]   << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-08-17 15:01:19  [ main:703 ] - [ DEBUG ]   << "Content-Length: 277[\r][\n]"
+2021-08-17 15:01:19  [ main:703 ] - [ DEBUG ]   << "Connection: keep-alive[\r][\n]"
+2021-08-17 15:01:19  [ main:704 ] - [ DEBUG ]   << "Error-Code: 0[\r][\n]"
+2021-08-17 15:01:19  [ main:704 ] - [ DEBUG ]   << "Error-Msg: ok[\r][\n]"
+2021-08-17 15:01:19  [ main:704 ] - [ DEBUG ]   << "[\r][\n]"
+2021-08-17 15:01:19  [ main:707 ] - [ DEBUG ]  Receiving response: HTTP/1.1 200 OK
+2021-08-17 15:01:19  [ main:707 ] - [ DEBUG ]  << HTTP/1.1 200 OK
+2021-08-17 15:01:19  [ main:708 ] - [ DEBUG ]  << Server: nginx
+2021-08-17 15:01:19  [ main:708 ] - [ DEBUG ]  << Date: Tue, 17 Aug 2021 07:01:21 GMT
+2021-08-17 15:01:19  [ main:709 ] - [ DEBUG ]  << Content-Type: application/json; charset=UTF-8
+2021-08-17 15:01:19  [ main:709 ] - [ DEBUG ]  << Content-Length: 277
+2021-08-17 15:01:19  [ main:713 ] - [ DEBUG ]  << Connection: keep-alive
+2021-08-17 15:01:19  [ main:715 ] - [ DEBUG ]  << Error-Code: 0
+2021-08-17 15:01:19  [ main:715 ] - [ DEBUG ]  << Error-Msg: ok
+2021-08-17 15:01:19  [ main:719 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:01:19  [ main:791 ] - [ DEBUG ]  Parsing response as: application/json; charset=UTF-8
+2021-08-17 15:01:19  [ main:793 ] - [ DEBUG ]  Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-08-17 15:01:20  [ main:877 ] - [ DEBUG ]   << "{"errcode":0,"errmsg":"ok","access_token":"CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw","expires_in":7200}"
+2021-08-17 15:01:20  [ main:879 ] - [ DEBUG ]  Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@24faea88
+2021-08-17 15:01:20  [ main:880 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:01:20  [ main:1383 ] - [ INFO ]  CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw
+2021-08-17 15:06:18  [ main:0 ] - [ DEBUG ]  Get connection for route {s}->https://qyapi.weixin.qq.com:443
+2021-08-17 15:06:18  [ main:55 ] - [ DEBUG ]  Connecting to qyapi.weixin.qq.com:443
+2021-08-17 15:06:19  [ main:595 ] - [ DEBUG ]  CookieSpec selected: ignoreCookies
+2021-08-17 15:06:19  [ main:597 ] - [ DEBUG ]  Auth cache not set in the context
+2021-08-17 15:06:19  [ main:598 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2021-08-17 15:06:19  [ main:598 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2021-08-17 15:06:19  [ main:599 ] - [ DEBUG ]  Attempt 1 to execute request
+2021-08-17 15:06:19  [ main:599 ] - [ DEBUG ]  Sending request: GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1
+2021-08-17 15:06:19  [ main:601 ] - [ DEBUG ]   >> "GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1[\r][\n]"
+2021-08-17 15:06:19  [ main:603 ] - [ DEBUG ]   >> "Accept: */*[\r][\n]"
+2021-08-17 15:06:19  [ main:603 ] - [ DEBUG ]   >> "Host: qyapi.weixin.qq.com[\r][\n]"
+2021-08-17 15:06:19  [ main:603 ] - [ DEBUG ]   >> "Connection: Keep-Alive[\r][\n]"
+2021-08-17 15:06:19  [ main:604 ] - [ DEBUG ]   >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)[\r][\n]"
+2021-08-17 15:06:19  [ main:605 ] - [ DEBUG ]   >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-08-17 15:06:19  [ main:605 ] - [ DEBUG ]   >> "[\r][\n]"
+2021-08-17 15:06:19  [ main:605 ] - [ DEBUG ]  >> GET /cgi-bin/gettoken?corpid=wwc13e1f3c6a12d7aa&corpsecret=QEXUPIltwraEpXo1lM0Q6S42Xw-i3Kogp5ue5VajiSg HTTP/1.1
+2021-08-17 15:06:19  [ main:606 ] - [ DEBUG ]  >> Accept: */*
+2021-08-17 15:06:19  [ main:607 ] - [ DEBUG ]  >> Host: qyapi.weixin.qq.com
+2021-08-17 15:06:19  [ main:607 ] - [ DEBUG ]  >> Connection: Keep-Alive
+2021-08-17 15:06:19  [ main:607 ] - [ DEBUG ]  >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)
+2021-08-17 15:06:19  [ main:607 ] - [ DEBUG ]  >> Accept-Encoding: gzip,deflate
+2021-08-17 15:06:19  [ main:775 ] - [ DEBUG ]   << "HTTP/1.1 200 OK[\r][\n]"
+2021-08-17 15:06:19  [ main:782 ] - [ DEBUG ]   << "Server: nginx[\r][\n]"
+2021-08-17 15:06:19  [ main:782 ] - [ DEBUG ]   << "Date: Tue, 17 Aug 2021 07:06:17 GMT[\r][\n]"
+2021-08-17 15:06:19  [ main:783 ] - [ DEBUG ]   << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-08-17 15:06:19  [ main:783 ] - [ DEBUG ]   << "Content-Length: 277[\r][\n]"
+2021-08-17 15:06:19  [ main:784 ] - [ DEBUG ]   << "Connection: keep-alive[\r][\n]"
+2021-08-17 15:06:19  [ main:784 ] - [ DEBUG ]   << "Error-Code: 0[\r][\n]"
+2021-08-17 15:06:19  [ main:785 ] - [ DEBUG ]   << "Error-Msg: ok[\r][\n]"
+2021-08-17 15:06:19  [ main:785 ] - [ DEBUG ]   << "[\r][\n]"
+2021-08-17 15:06:19  [ main:788 ] - [ DEBUG ]  Receiving response: HTTP/1.1 200 OK
+2021-08-17 15:06:19  [ main:789 ] - [ DEBUG ]  << HTTP/1.1 200 OK
+2021-08-17 15:06:19  [ main:792 ] - [ DEBUG ]  << Server: nginx
+2021-08-17 15:06:19  [ main:794 ] - [ DEBUG ]  << Date: Tue, 17 Aug 2021 07:06:17 GMT
+2021-08-17 15:06:19  [ main:794 ] - [ DEBUG ]  << Content-Type: application/json; charset=UTF-8
+2021-08-17 15:06:19  [ main:794 ] - [ DEBUG ]  << Content-Length: 277
+2021-08-17 15:06:19  [ main:795 ] - [ DEBUG ]  << Connection: keep-alive
+2021-08-17 15:06:19  [ main:795 ] - [ DEBUG ]  << Error-Code: 0
+2021-08-17 15:06:19  [ main:796 ] - [ DEBUG ]  << Error-Msg: ok
+2021-08-17 15:06:19  [ main:799 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:06:19  [ main:885 ] - [ DEBUG ]  Parsing response as: application/json; charset=UTF-8
+2021-08-17 15:06:19  [ main:886 ] - [ DEBUG ]  Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-08-17 15:06:19  [ main:967 ] - [ DEBUG ]   << "{"errcode":0,"errmsg":"ok","access_token":"CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw","expires_in":7200}"
+2021-08-17 15:06:19  [ main:972 ] - [ DEBUG ]  Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3a320ade
+2021-08-17 15:06:19  [ main:973 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:06:20  [ main:1640 ] - [ DEBUG ]  Get connection for route {s}->https://qyapi.weixin.qq.com:443
+2021-08-17 15:06:20  [ main:1642 ] - [ DEBUG ]  Connecting to qyapi.weixin.qq.com:443
+2021-08-17 15:06:20  [ main:1947 ] - [ DEBUG ]  CookieSpec selected: ignoreCookies
+2021-08-17 15:06:20  [ main:1949 ] - [ DEBUG ]  Auth cache not set in the context
+2021-08-17 15:06:20  [ main:1950 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2021-08-17 15:06:20  [ main:1950 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2021-08-17 15:06:20  [ main:1951 ] - [ DEBUG ]  Attempt 1 to execute request
+2021-08-17 15:06:20  [ main:1952 ] - [ DEBUG ]  Sending request: POST /cgi-bin/department/create?access_token=CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw HTTP/1.1
+2021-08-17 15:06:20  [ main:1953 ] - [ DEBUG ]   >> "POST /cgi-bin/department/create?access_token=CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw HTTP/1.1[\r][\n]"
+2021-08-17 15:06:20  [ main:1954 ] - [ DEBUG ]   >> "Accept: */*[\r][\n]"
+2021-08-17 15:06:20  [ main:1955 ] - [ DEBUG ]   >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-08-17 15:06:20  [ main:1956 ] - [ DEBUG ]   >> "Content-Length: 103[\r][\n]"
+2021-08-17 15:06:20  [ main:1956 ] - [ DEBUG ]   >> "Host: qyapi.weixin.qq.com[\r][\n]"
+2021-08-17 15:06:20  [ main:1956 ] - [ DEBUG ]   >> "Connection: Keep-Alive[\r][\n]"
+2021-08-17 15:06:20  [ main:1957 ] - [ DEBUG ]   >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)[\r][\n]"
+2021-08-17 15:06:20  [ main:1957 ] - [ DEBUG ]   >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-08-17 15:06:20  [ main:1957 ] - [ DEBUG ]   >> "[\r][\n]"
+2021-08-17 15:06:20  [ main:1963 ] - [ DEBUG ]  >> POST /cgi-bin/department/create?access_token=CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw HTTP/1.1
+2021-08-17 15:06:20  [ main:1964 ] - [ DEBUG ]  >> Accept: */*
+2021-08-17 15:06:20  [ main:1964 ] - [ DEBUG ]  >> Content-Type: application/json; charset=UTF-8
+2021-08-17 15:06:20  [ main:1964 ] - [ DEBUG ]  >> Content-Length: 103
+2021-08-17 15:06:20  [ main:1964 ] - [ DEBUG ]  >> Host: qyapi.weixin.qq.com
+2021-08-17 15:06:20  [ main:1965 ] - [ DEBUG ]  >> Connection: Keep-Alive
+2021-08-17 15:06:20  [ main:1965 ] - [ DEBUG ]  >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_282)
+2021-08-17 15:06:20  [ main:1967 ] - [ DEBUG ]  >> Accept-Encoding: gzip,deflate
+2021-08-17 15:06:20  [ main:1968 ] - [ DEBUG ]   >> "{[\n]"
+2021-08-17 15:06:20  [ main:1968 ] - [ DEBUG ]   >> "   "name": "[0xe5][0xb9][0xbf][0xe5][0xb7][0x9e][0xe7][0xa0][0x94][0xe5][0x8f][0x91][0xe4][0xb8][0xad][0xe5][0xbf][0x83]",[\n]"
+2021-08-17 15:06:20  [ main:1968 ] - [ DEBUG ]   >> "   "name_en": "RDGZ",[\n]"
+2021-08-17 15:06:20  [ main:1969 ] - [ DEBUG ]   >> "   "parentid": 1,[\n]"
+2021-08-17 15:06:20  [ main:1969 ] - [ DEBUG ]   >> "   "order": 1,[\n]"
+2021-08-17 15:06:20  [ main:1970 ] - [ DEBUG ]   >> "   "id": 2[\n]"
+2021-08-17 15:06:20  [ main:1970 ] - [ DEBUG ]   >> "}[\n]"
+2021-08-17 15:06:20  [ main:2098 ] - [ DEBUG ]   << "HTTP/1.1 200 OK[\r][\n]"
+2021-08-17 15:06:20  [ main:2098 ] - [ DEBUG ]   << "Server: nginx[\r][\n]"
+2021-08-17 15:06:20  [ main:2098 ] - [ DEBUG ]   << "Date: Tue, 17 Aug 2021 07:06:18 GMT[\r][\n]"
+2021-08-17 15:06:20  [ main:2099 ] - [ DEBUG ]   << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2021-08-17 15:06:20  [ main:2100 ] - [ DEBUG ]   << "Content-Length: 230[\r][\n]"
+2021-08-17 15:06:20  [ main:2100 ] - [ DEBUG ]   << "Connection: keep-alive[\r][\n]"
+2021-08-17 15:06:20  [ main:2100 ] - [ DEBUG ]   << "Error-Code: 60011[\r][\n]"
+2021-08-17 15:06:20  [ main:2101 ] - [ DEBUG ]   << "Error-Msg: no privilege to access/modify contact/party/agent , hint: [1629183980_161_401d81f20f6b88aa15f9a26bf0be6db9], from ip: 115.220.172.192, more info at https://open.work.weixin.qq.com/devtool/query?e=60011[\r][\n]"
+2021-08-17 15:06:20  [ main:2102 ] - [ DEBUG ]   << "[\r][\n]"
+2021-08-17 15:06:20  [ main:2103 ] - [ DEBUG ]  Receiving response: HTTP/1.1 200 OK
+2021-08-17 15:06:20  [ main:2104 ] - [ DEBUG ]  << HTTP/1.1 200 OK
+2021-08-17 15:06:20  [ main:2105 ] - [ DEBUG ]  << Server: nginx
+2021-08-17 15:06:20  [ main:2105 ] - [ DEBUG ]  << Date: Tue, 17 Aug 2021 07:06:18 GMT
+2021-08-17 15:06:20  [ main:2105 ] - [ DEBUG ]  << Content-Type: application/json; charset=UTF-8
+2021-08-17 15:06:20  [ main:2105 ] - [ DEBUG ]  << Content-Length: 230
+2021-08-17 15:06:20  [ main:2106 ] - [ DEBUG ]  << Connection: keep-alive
+2021-08-17 15:06:20  [ main:2106 ] - [ DEBUG ]  << Error-Code: 60011
+2021-08-17 15:06:20  [ main:2107 ] - [ DEBUG ]  << Error-Msg: no privilege to access/modify contact/party/agent , hint: [1629183980_161_401d81f20f6b88aa15f9a26bf0be6db9], from ip: 115.220.172.192, more info at https://open.work.weixin.qq.com/devtool/query?e=60011
+2021-08-17 15:06:20  [ main:2107 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:06:20  [ main:2110 ] - [ DEBUG ]  Parsing response as: application/json; charset=UTF-8
+2021-08-17 15:06:20  [ main:2111 ] - [ DEBUG ]  Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2021-08-17 15:06:20  [ main:2133 ] - [ DEBUG ]   << "{"errcode":60011,"errmsg":"no privilege to access/modify contact/party/agent , hint: [1629183980_161_401d81f20f6b88aa15f9a26bf0be6db9], from ip: 115.220.172.192, more info at https://open.work.weixin.qq.com/devtool/query?e=60011"}"
+2021-08-17 15:06:20  [ main:2134 ] - [ DEBUG ]  Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5fa47fea
+2021-08-17 15:06:20  [ main:2134 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2021-08-17 15:06:20  [ main:2137 ] - [ INFO ]  CzVpTnTG8r6pQl5E8md74AGI5qa4DyAiNzBzkknxhu526FPbMwpgnb85f26qGXxAEzZ01zhnQmolkuUMuaSVZYsMmyC6RHTZJFtki4GNUvKwzci48PqNPo8fO0VIvfqHTL5nVfF93OD2ALBDf9v73RYrRj5zA52fJIvv8dwl4BcGfMy1aaSEbzqoM64gp6_PKmb2TZKo3NxjIstGqBkeiw

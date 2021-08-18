@@ -32,7 +32,11 @@ public class TestDemo {
 
     @Test
     void restassuredGetMethod(){
-        given().get("").then().log().all();
+        given()
+                .get("https://www.baidu.com")
+                .then()
+                .statusCode(200)
+                .log().all();
     }
 
     @Test
@@ -131,5 +135,6 @@ public class TestDemo {
         }).forEach(System.out::println);
 
     }
+
 
 }
