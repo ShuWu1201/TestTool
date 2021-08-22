@@ -8,16 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hogwarts-mybatis" />
-        <module name="TestNGDemo" />
         <module name="Junit5Demo" />
         <module name="selenium" />
-        <module name="zz-test-debug" />
         <module name="hogwarts-mini" />
+        <module name="interfaceframework" />
+        <module name="TestNGDemo" />
+        <module name="zz-test-debug" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hogwarts-mini" target="1.8" />
       <module name="hogwarts-mybatis" target="1.8" />
+      <module name="interfaceframework" target="1.8" />
       <module name="Junit5Demo" target="1.8" />
       <module name="selenium" target="1.8" />
       <module name="TestNGDemo" target="1.8" />
