@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Junit5Demo/Junit5Demo.iml" filepath="$PROJECT_DIR$/Junit5Demo/Junit5Demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TestNGDemo/TestNGDemo.iml" filepath="$PROJECT_DIR$/TestNGDemo/TestNGDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TestTool.iml" filepath="$PROJECT_DIR$/.idea/TestTool.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hogwarts-mini/hogwarts-mini.iml" filepath="$PROJECT_DIR$/hogwarts-mini/hogwarts-mini.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hogwarts-mybatis/hogwarts-mybatis.iml" filepath="$PROJECT_DIR$/hogwarts-mybatis/hogwarts-mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/interfaceframework/interfaceframework.iml" filepath="$PROJECT_DIR$/interfaceframework/interfaceframework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/selenium/selenium.iml" filepath="$PROJECT_DIR$/selenium/selenium.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zz-test-debug/zz-test-debug.iml" filepath="$PROJECT_DIR$/zz-test-debug/zz-test-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
     </modules>
   </component>
 </project>
